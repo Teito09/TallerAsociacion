@@ -29,9 +29,9 @@ public class Lector {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public void tomerprestado(Libro Libro){
+    public void tomarprestado(Libro Libro){
         if( LibroActual != null){
-            System.out.println(nombre + " ya tiene el libro \" " + LibroActual.getTitulo()+ "\" .Debe devolverlo primero");
+            System.out.println(nombre + " ya tiene el libro \" " + LibroActual.getTitulo()+ "\" . Debe devolverlo primero");
         }else{
             if(Libro.prestar()){
                 LibroActual= Libro;

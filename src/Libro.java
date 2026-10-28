@@ -44,19 +44,21 @@ public class Libro {
             System.out.println("Esta disponible.");
         }
     }
-    public void prestar(){
+    public boolean prestar(){
         if(disponible){setDisponible(false);
-            System.out.println("Te prestamos el libro.");
+            System.out.println("El libro \"" + titulo + "\" fue prestado.");
+            return true;
         }else{
-            System.out.println("El libro ya está prestado.");
+            System.out.println("El libro \"" + titulo + "\" ya fue prestado.");
+            return false;
         }
     }
     public void devolver(){
         if(!disponible){
             setDisponible(true);
-            System.out.println("Libro devuelto.");
+            System.out.println("El libro \"" + titulo + "\" ya fue devuelto.");
         }else{
-            System.out.println("El libro ya está prestado.");
+            System.out.println("El libro \"" + titulo + "\" ya esta prestado.");
         }
     }
 }
